@@ -1,0 +1,27 @@
+[project]
+name = "correction-capteurs"
+version = "0.1.0"
+description = "Exercices sur la correction des capteurs"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = [ "F401" ]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.uv.workspace]
+members = [
+    "ex1_offset",
+    "ex2_moyenne_mobile",
+    "ex3_filtrage",
+    "ex4_calibration",
+    "ex5_bonus_nonlinearite",
+]
