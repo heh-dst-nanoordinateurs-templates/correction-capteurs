@@ -25,3 +25,8 @@ members = [
     "ex4_calibration",
     "ex5_bonus_nonlinearite",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]

@@ -26,60 +26,40 @@ name = "correction-capteurs"
 version = "0.1.0"
 source = { virtual = "." }
 
-[[package]]
-name = "ex1-offset"
-version = "0.1.0"
-source = { virtual = "ex1_offset" }
-dependencies = [
+[package.dev-dependencies]
+dev = [
     { name = "pytest" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.0.2" }]
+
+[[package]]
+name = "ex1-offset"
+version = "0.1.0"
+source = { virtual = "ex1_offset" }
 
 [[package]]
 name = "ex2-moyenne-mobile"
 version = "0.1.0"
 source = { virtual = "ex2_moyenne_mobile" }
-dependencies = [
-    { name = "pytest" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
 
 [[package]]
 name = "ex3-filtrage"
 version = "0.1.0"
 source = { virtual = "ex3_filtrage" }
-dependencies = [
-    { name = "pytest" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
 
 [[package]]
 name = "ex4-calibration"
 version = "0.1.0"
 source = { virtual = "ex4_calibration" }
-dependencies = [
-    { name = "pytest" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
 
 [[package]]
 name = "ex5-bonus-nonlinearite"
 version = "0.1.0"
 source = { virtual = "ex5_bonus_nonlinearite" }
-dependencies = [
-    { name = "pytest" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
 
 [[package]]
 name = "iniconfig"
