@@ -47,4 +47,4 @@ class FakeUltrasoundSensor:
         """Retourne la prochaine mesure brute (valide ou aberrante)."""
         if random.random() < self._outlier_prob:
             return random.choice([self._min_valid - self._range * 0.1, self._max_valid + self._range * 0.1])
-        return self._true_distance + random.gauss(0, 1.0)
+        return self._true_distance

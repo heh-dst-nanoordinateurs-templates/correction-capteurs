@@ -6,7 +6,6 @@ Traitez-le comme une boîte noire : vous savez ce qu'il expose (read()), pas com
 """
 
 import math
-import random
 
 
 class FakeNonlinearUltrasoundSensor:
@@ -23,17 +22,13 @@ class FakeNonlinearUltrasoundSensor:
     ----------
     true_distance : float
         Distance réelle simulée (cm).
-    noise_std : float
-        Écart-type du bruit gaussien (cm).
     """
 
     def __init__(
         self,
         true_distance: float = 80.0,
-        noise_std: float = 1.0,
     ):
         self._true_distance: float = true_distance
-        self._noise_std: float = noise_std
 
     def _distort(self, distance: float) -> float:
         """Applique la distorsion non-linéaire interne (logarithmique)."""
@@ -43,5 +38,4 @@ class FakeNonlinearUltrasoundSensor:
 
     def read(self) -> float:
         """Retourne la prochaine mesure brute."""
-        distorted = self._distort(self._true_distance)
-        return distorted + random.gauss(0, self._noise_std)
+        return self._distort(self._true_distance)
