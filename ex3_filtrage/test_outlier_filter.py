@@ -1,4 +1,4 @@
-from exercice import OutlierFilter
+from outlier_filter import OutlierFilter
 
 
 # TODO: écrivez au moins 3 tests pour OutlierFilter.update().

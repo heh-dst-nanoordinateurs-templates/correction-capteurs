@@ -18,7 +18,7 @@ Il expose les méthodes suivantes :
 
 ## Partie 1 — Calibration et normalisation
 
-Dans `exercice.py`, implémentez une classe `PotentiometerCalibrator` qui :
+Dans `potentiometer_calibrator.py`, implémentez une classe `PotentiometerCalibrator` qui :
 
 1. prend `raw_min` et `raw_max` en paramètres du constructeur (les valeurs brutes aux deux butées)
 2. expose une méthode `normalize(raw_value)` qui :
@@ -30,13 +30,13 @@ Implémentez aussi une fonction `calibrate(sensor)` qui :
 1. appelle `sensor.sweep()` pour observer les valeurs brutes min et max
 2. construit et retourne un `PotentiometerCalibrator` avec ces bornes
 
-Vérifiez en lançant `uv run exercice.py` : après calibration, les valeurs affichées doivent être proches de `[0 %, 100 %]`.
+Vérifiez en lançant `uv run potentiometer_calibrator.py` : après calibration, les valeurs affichées doivent être proches de `[0 %, 100 %]`.
 
-Si vous n'utilisez pas `uv`, lancez `python3 exercice.py`.
+Si vous n'utilisez pas `uv`, lancez `python3 potentiometer_calibrator.py`.
 
 ## Partie 2 — Tests unitaires
 
-Dans `test_exercice.py`, écrivez au moins 3 tests pytest pour `PotentiometerCalibrator.normalize()`.
+Dans `test_potentiometer_calibrator.py`, écrivez au moins 3 tests pytest pour `PotentiometerCalibrator.normalize()`.
 
 Couvrez notamment :
 
@@ -61,8 +61,8 @@ Tous les tests doivent être verts avant de passer à l'exercice suivant.
 
 ## Ce qu'on attend
 
-| Fichier                 | À modifier ? | Contenu attendu                             |
-| ----------------------- | ------------ | ------------------------------------------- |
-| `fake_potentiometer.py` | Non          | Stub fourni, boîte noire                    |
-| `exercice.py`           | Oui          | Classe `PotentiometerCalibrator` + `main()` |
-| `test_exercice.py`      | Oui          | Tests pytest pour `PotentiometerCalibrator` |
+| Fichier                            | À modifier ? | Contenu attendu                             |
+| ---------------------------------- | ------------ | ------------------------------------------- |
+| `fake_potentiometer.py`            | Non          | Stub fourni, boîte noire                    |
+| `potentiometer_calibrator.py`      | Oui          | Classe `PotentiometerCalibrator` + `main()` |
+| `test_potentiometer_calibrator.py` | Oui          | Tests pytest pour `PotentiometerCalibrator` |

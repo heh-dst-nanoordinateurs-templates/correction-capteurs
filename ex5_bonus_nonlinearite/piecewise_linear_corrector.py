@@ -1,4 +1,4 @@
-from fake_ultrasound import FakeNonlinearUltrasoundSensor
+from fake_ultrasound_nonlinear import FakeNonlinearUltrasoundSensor
 
 # Table de calibration fournie : (valeur_brute, distance_réelle_cm)
 # Ces points ont été mesurés avec un instrument de référence.
@@ -30,7 +30,7 @@ class PiecewiseLinearCorrector:
 def main():
     corrector = PiecewiseLinearCorrector(CALIBRATION_TABLE)
     for sensor_value in range(5, 206, 10):
-        sensor = FakeNonlinearUltrasoundSensor(sensor_value, noise_std=1.0)
+        sensor = FakeNonlinearUltrasoundSensor(sensor_value)
         raw = sensor.read()
         corrected = corrector.correct(raw)
         print(f"Distance réelle : {sensor_value:3d} cm   ->   Brut : {raw:6.1f}   ->   Corrigé : {corrected:6.1f} cm")

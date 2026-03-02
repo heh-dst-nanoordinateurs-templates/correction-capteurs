@@ -17,14 +17,8 @@ ignore = [ "F401" ]
 quote-style = "double"
 indent-style = "space"
 
-[tool.uv.workspace]
-members = [
-    "ex1_offset",
-    "ex2_moyenne_mobile",
-    "ex3_filtrage",
-    "ex4_calibration",
-    "ex5_bonus_nonlinearite",
-]
+[tool.pytest]
+strict = true
 
 [dependency-groups]
 dev = [

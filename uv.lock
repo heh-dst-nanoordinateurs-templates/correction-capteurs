@@ -2,16 +2,6 @@ version = 1
 revision = 3
 requires-python = ">=3.13"
 
-[manifest]
-members = [
-    "correction-capteurs",
-    "ex1-offset",
-    "ex2-moyenne-mobile",
-    "ex3-filtrage",
-    "ex4-calibration",
-    "ex5-bonus-nonlinearite",
-]
-
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -35,31 +25,6 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=9.0.2" }]
-
-[[package]]
-name = "ex1-offset"
-version = "0.1.0"
-source = { virtual = "ex1_offset" }
-
-[[package]]
-name = "ex2-moyenne-mobile"
-version = "0.1.0"
-source = { virtual = "ex2_moyenne_mobile" }
-
-[[package]]
-name = "ex3-filtrage"
-version = "0.1.0"
-source = { virtual = "ex3_filtrage" }
-
-[[package]]
-name = "ex4-calibration"
-version = "0.1.0"
-source = { virtual = "ex4_calibration" }
-
-[[package]]
-name = "ex5-bonus-nonlinearite"
-version = "0.1.0"
-source = { virtual = "ex5_bonus_nonlinearite" }
 
 [[package]]
 name = "iniconfig"

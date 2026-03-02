@@ -5,9 +5,9 @@
 Chaque exercice contient :
 
 - `README.md` : Énoncé de l'exercice
-- `exercice.py` : Fichier vide à compléter par l'étudiant
-- `test_exercice.py` : Fichier de tests unitaires à compléter par l'étudiant
-- `fake_sensor.py` : Fichier fourni par l'enseignant pour simuler le capteur
+- `<nom_classe>.py` : Fichier à compléter par l'étudiant
+- `test_<nom_classe>.py` : Fichier de tests unitaires à compléter par l'étudiant
+- `fake_<capteur>.py` : Fichier fourni par l'enseignant pour simuler le capteur (ne pas modifier)
 
 ## 📝 Liste des exercices
 

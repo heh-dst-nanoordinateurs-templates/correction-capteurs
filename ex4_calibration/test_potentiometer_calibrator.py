@@ -1,4 +1,4 @@
-from exercice import PotentiometerCalibrator
+from potentiometer_calibrator import PotentiometerCalibrator
 
 
 # TODO: écrivez au moins 3 tests pour PotentiometerCalibrator.normalize().

@@ -1,4 +1,4 @@
-from fake_ultrasound import FakeUltrasoundSensor
+from fake_ultrasound_with_noise import FakeUltrasoundSensor
 
 
 class MovingAverage:

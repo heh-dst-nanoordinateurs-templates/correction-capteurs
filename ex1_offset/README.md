@@ -9,19 +9,19 @@ Le fichier `fake_temperature.py` simule ce capteur. Ne le modifiez pas.
 
 ## Partie 1 — Correction
 
-Dans `exercice.py`, implémentez une classe `OffsetCorrector` qui :
+Dans `offset_corrector.py`, implémentez une classe `OffsetCorrector` qui :
 
 1. prend l'offset connu en paramètre du constructeur
 2. expose une méthode `correct(raw_value)` qui retourne la valeur corrigée
 
-Vérifiez votre correction en ouvrant un terminal dans le bon dossier et en lançant `uv run exercice.py` directement :
+Vérifiez votre correction en ouvrant un terminal dans le bon dossier et en lançant `uv run offset_corrector.py` directement :
 les valeurs corrigées doivent se situer dans la plage `[16.0, 35.0]`.
 
-Si vous n'utilisez pas `uv`, lancez `python3 exercice.py`.
+Si vous n'utilisez pas `uv`, lancez `python3 offset_corrector.py`.
 
 ## Partie 2 — Tests unitaires
 
-Dans `test_exercice.py`, écrivez au moins 3 tests pytest pour `OffsetCorrector.correct()`.
+Dans `test_offset_corrector.py`, écrivez au moins 3 tests pytest pour `OffsetCorrector.correct()`.
 
 Couvrez notamment :
 
@@ -46,8 +46,8 @@ Tous les tests doivent être verts avant de passer à l'exercice suivant.
 
 ## Ce qu'on attend
 
-| Fichier               | À modifier ? | Contenu attendu                     |
-| --------------------- | ------------ | ----------------------------------- |
-| `fake_temperature.py` | Non          | Stub fourni, boîte noire            |
-| `exercice.py`         | Oui          | Classe `OffsetCorrector` + `main()` |
-| `test_exercice.py`    | Oui          | Tests pytest pour `OffsetCorrector` |
+| Fichier                    | À modifier ? | Contenu attendu                     |
+| -------------------------- | ------------ | ----------------------------------- |
+| `fake_temperature.py`      | Non          | Stub fourni, boîte noire            |
+| `offset_corrector.py`      | Oui          | Classe `OffsetCorrector` + `main()` |
+| `test_offset_corrector.py` | Oui          | Tests pytest pour `OffsetCorrector` |

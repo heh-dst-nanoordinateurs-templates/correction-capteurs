@@ -1,4 +1,4 @@
-from exercice import MovingAverage
+from moving_average import MovingAverage
 
 
 # TODO: écrivez au moins 3 tests pour MovingAverage.update().

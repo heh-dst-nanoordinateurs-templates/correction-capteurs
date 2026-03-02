@@ -1,4 +1,4 @@
-from exercice import PiecewiseLinearCorrector
+from piecewise_linear_corrector import PiecewiseLinearCorrector
 
 
 # TODO: écrivez au moins 3 tests pour PiecewiseLinearCorrector.correct().

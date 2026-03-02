@@ -12,7 +12,7 @@ class OffsetCorrector:
 
 def main():
     sensor = FakeTemperatureSensor()
-    corrector = OffsetCorrector(offset=???)  # TODO: quelle valeur passer ici ?
+    corrector = OffsetCorrector(offset=123.4)  # TODO: quelle valeur passer ici ?
 
     for _ in range(10):
         raw_value = sensor.read()

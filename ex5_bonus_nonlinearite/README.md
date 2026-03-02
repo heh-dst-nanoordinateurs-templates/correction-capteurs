@@ -9,12 +9,12 @@ La relation entre brut et réel suit une courbe.
 Pour corriger cela, on dispose d'une **table de calibration** : quelques points mesurés
 avec un instrument de référence. Entre ces points, on interpole linéairement.
 
-Le fichier `fake_ultrasound.py` simule ce capteur. Ne le modifiez pas.
+Le fichier `fake_ultrasound_nonlinear.py` simule ce capteur. Ne le modifiez pas.
 Les valeurs qu'il retourne ne sont pas en centimètres.
 
 ## Partie 1 — Interpolation linéaire par morceaux
 
-Dans `exercice.py`, une constante `CALIBRATION_TABLE` est fournie.
+Dans `piecewise_linear_corrector.py`, une constante `CALIBRATION_TABLE` est fournie.
 C'est une liste de tuples `(valeur_brute, distance_réelle_cm)` triés par valeur brute croissante.
 
 Implémentez une classe `PiecewiseLinearCorrector` qui :
@@ -32,13 +32,13 @@ t = (raw - x0) / (x1 - x0)
 corrected = y0 + t * (y1 - y0)
 ```
 
-Vérifiez en lançant `uv run exercice.py` : pour une distance réelle de 80 cm, les valeurs corrigées doivent être proches des valeurs réelles.
+Vérifiez en lançant `uv run piecewise_linear_corrector.py` : pour une distance réelle de 80 cm, les valeurs corrigées doivent être proches des valeurs réelles.
 
-Si vous n'utilisez pas `uv`, lancez `python3 exercice.py`.
+Si vous n'utilisez pas `uv`, lancez `python3 piecewise_linear_corrector.py`.
 
 ## Partie 2 — Tests unitaires
 
-Dans `test_exercice.py`, écrivez au moins 3 tests pytest pour `PiecewiseLinearCorrector.correct()`.
+Dans `test_piecewise_linear_corrector.py`, écrivez au moins 3 tests pytest pour `PiecewiseLinearCorrector.correct()`.
 
 Couvrez notamment :
 
@@ -61,8 +61,8 @@ pytest
 
 ## Ce qu'on attend
 
-| Fichier              | À modifier ? | Contenu attendu                              |
-| -------------------- | ------------ | -------------------------------------------- |
-| `fake_ultrasound.py` | Non          | Stub fourni, boîte noire                     |
-| `exercice.py`        | Oui          | Classe `PiecewiseLinearCorrector` + `main()` |
-| `test_exercice.py`   | Oui          | Tests pytest pour `PiecewiseLinearCorrector` |
+| Fichier                              | À modifier ? | Contenu attendu                              |
+| ------------------------------------ | ------------ | -------------------------------------------- |
+| `fake_ultrasound_nonlinear.py`       | Non          | Stub fourni, boîte noire                     |
+| `piecewise_linear_corrector.py`      | Oui          | Classe `PiecewiseLinearCorrector` + `main()` |
+| `test_piecewise_linear_corrector.py` | Oui          | Tests pytest pour `PiecewiseLinearCorrector` |

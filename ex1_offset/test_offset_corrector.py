@@ -1,4 +1,4 @@
-from exercice import OffsetCorrector
+from offset_corrector import OffsetCorrector
 
 
 # TODO: écrivez au moins 3 tests pour OffsetCorrector.correct().
